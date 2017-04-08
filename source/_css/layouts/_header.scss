@@ -1,67 +1,63 @@
 #header {
-    display:                     block;
-    width:                       100%;
-    height:                      map-get($header, height);
-    background:                  map-get($header, background);
-    position:                    fixed;
-    top:                         0;
-    border:                      map-get($header, border);
-    color:                       map-get($header, color);
+    display: block;
+    width: 100%;
+    height: map-get($header, height);
+    background: map-get($header, background);
+    position: fixed;
+    top: 0;
+    border: map-get($header, border);
+    color: map-get($header, color);
     // used to animate the header on small screen with javascript
     //@include prefix(transition, top 0.25s ease-in-out, 'webkit' 'moz' 'ms' 'o');
-    z-index:                     map-get($z-indexes, l-header);
+    z-index: map-get($z-indexes, l-header);
     // Sidebar animation
     // Transition style (push)
-    transition:                  transform .25s ease-in-out;
-    -webkit-transition:          -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
     // Eliminate any flickering of elements while they are in a state of being animated
     -webkit-backface-visibility: hidden;
-    -webkit-perspective:         1000;
-
+    -webkit-perspective: 1000;
     #btn-open-sidebar {
         position: absolute;
         // vertical center
-        top:      20px;
-        left:     20px;
-        cursor:   pointer;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
     }
     .header-right-picture {
         position: absolute;
         // vertical center
-        top:      12.5px;
-        right:    20px;
-        display:  block;
-        width:    30px;
-        height:   30px;
-        color:    map-get($header, color);
-
+        top: 12.5px;
+        right: 20px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: map-get($header, color);
         .header-picture {
-            display:       block;
-            width:         30px;
-            height:        30px;
+            display: block;
+            width: 30px;
+            height: 30px;
             border-radius: 15px;
         }
     }
     .header-right-icon {
         position: absolute;
         // vertical center
-        top:      12.5px;
-        right:    20px;
-        color:    map-get($header, color);
+        top: 12.5px;
+        right: 20px;
+        color: map-get($header, color);
     }
     .header-title {
-        text-align:  center;
-        font-size:   $font-size-base;
+        text-align: center;
+        font-size: $font-size-base;
         line-height: 55px;
-        margin:      0;
-
+        margin: 0;
         .header-title-link {
-            color:       map-get($header, color);
+            color: map-get($header, color);
             font-weight: normal;
-
             &:hover,
             &:active {
-                color:           darken(map-get($header, color), 10);
+                color: darken(map-get($header, color), 10);
                 text-decoration: none;
             }
         }
@@ -70,7 +66,6 @@
     &.header-up {
         @include prefix(transform, translate3d(0, -#{map-get($header, height)}, 0), 'webkit' 'moz');
     }
-
     // Push the header from the size of the large sidebar
     &[data-behavior="1"],
     &[data-behavior="2"],
@@ -78,7 +73,6 @@
     &[data-behavior="5"] {
         @include header-pushed-lg;
     }
-
     // Push the header from the size of the medium sidebar
     &[data-behavior="3"],
     &[data-behavior="6"] {
@@ -109,4 +103,29 @@
             @include header-pushed-lg;
         }
     }
+}
+
+.socialicons {
+    text-align: center;
+    height: 40px;
+    display: block;
+    visibility: visible;
+}
+
+.socialicons .icon {
+    color: #909090;
+    border: 1px solid #CFCFCF;
+    display: inline-block;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 1px 8px;
+}
+
+.socialicons .icon:hover {
+    color: blue;
+    border: 1px solid #CFCFCF;
 }

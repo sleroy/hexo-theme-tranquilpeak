@@ -1,0 +1,24 @@
+<%
+        var thelink;
+        var facebook;
+        var twitter;
+        var gplus;
+        var linkedin;
+        if (post.link && _('post.go_to_website')) { 
+            thelink = "https://sylvainleroy.fr" + url_for(post.link);
+        } else if (__('post.read_more')) {
+            thelink = "https://sylvainleroy.fr" + url_for(post.path);
+        }
+
+        linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url='+ encodeURIComponent(thelink) +'&title=' + post.title;
+        gplus = 'https://plus.google.com/share?url=' + encodeURIComponent(thelink);
+        facebook = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(thelink);
+        twitter = 'https://twitter.com/home?status=Great%20post%20'+ encodeURIComponent(thelink);
+%>
+<div>
+    <a class="icon" href='<%- facebook %>' title="Follow with Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a class="icon" href="<%- gplus %>" title="Follow with Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
+    <a class="icon" href="<%- linkedin %>" title="Follow with Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a class="icon" href="mailto:<%= thelink %>" title="Send the article by mail" target="_blank"><i class="fa fa-envelope"></i></a>
+    <a class="icon" href="<%- twitter %>" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+</div> 

@@ -3,27 +3,25 @@
 .postShorten-group {
     .postShorten {
         // Space between 2 shorten post
-        margin-top:    15px;
+        margin-top: 15px;
         border-bottom: 1px solid #eef2f8;
     }
 }
 
 // Post
 .postShorten {
-    position:       relative;
-    width:          100%;
-    display:        inline-block;
+    position: relative;
+    width: 100%;
+    display: inline-block;
     vertical-align: top;
-
     .postShorten-thumbnailimg {
-        overflow:hidden;
+        overflow: hidden;
     }
     .postShorten-header {
         .postShorten-title {
-            margin:     0;
+            margin: 0;
             word-break: initial;
-            overflow:   hidden;
-
+            overflow: hidden;
             &:hover {
                 text-decoration: none;
             }
@@ -32,7 +30,6 @@
     // postShorten meta contains post's date, post's categories and tags
     .postShorten-meta {
         line-height: 1.5em;
-
         a {
             color: map-get($colors, light);
         }
@@ -49,22 +46,21 @@
     .postShorten-readingtime,
     .postShorten-excerpt_link {
         font-family: map-get($font-families, 'post-excerpt-link');
-        font-size:   map-get($font-size, small);
+        font-size: map-get($font-size, small);
         font-weight: 400;
     }
     .postShorten-excerpt,
     .postShorten-content {
         text-rendering: optimizelegibility;
         letter-spacing: -0.3px;
-        font-family:    map-get($font-families, 'post-content');
-        color:          map-get($colors, base);
-        font-weight:    400;
-        overflow:       hidden;
+        font-family: map-get($font-families, 'post-content');
+        color: map-get($colors, base);
+        font-weight: 400;
+        overflow: hidden;
         @include prefix('hypens', 'auto', 'webkit' 'moz');
-
         img {
-            display:   block;
-            width:     auto;
+            display: block;
+            width: auto;
             max-width: 100%;
         }
     }
@@ -81,7 +77,6 @@
     .postShorten {
         .postShorten-thumbnailimg {
             display: none;
-
             img {
                 display: none;
             }
@@ -93,15 +88,14 @@
 @media #{$small-and-up} {
     .postShorten.postShorten--thumbnailimg-right {
         .postShorten-thumbnailimg {
-            float:  right;
+            float: right;
             margin: 5px 0 30px 15px;
-
             img {
-                display:    block;
-                width:      $post-thumbnail-image-width;
-                height:     $post-thumbnail-image-width;
+                display: block;
+                width: $post-thumbnail-image-width;
+                height: $post-thumbnail-image-width;
                 object-fit: cover;
-                overflow:   hidden;
+                overflow: hidden;
             }
         }
         .postShorten-wrap {
@@ -111,15 +105,14 @@
     }
     .postShorten.postShorten--thumbnailimg-left {
         .postShorten-thumbnailimg {
-            float:  left;
+            float: left;
             margin: 5px 15px 30px 0;
-
             img {
-                display:    block;
-                width:      $post-thumbnail-image-width;
-                height:     $post-thumbnail-image-width;
+                display: block;
+                width: $post-thumbnail-image-width;
+                height: $post-thumbnail-image-width;
                 object-fit: cover;
-                overflow:   hidden;
+                overflow: hidden;
             }
         }
         .postShorten-wrap {
@@ -135,20 +128,18 @@
     .postShorten.postShorten--thumbnailimg-bottom {
         .postShorten-wrap {
             display: block;
-            width:   100%;
+            width: 100%;
         }
-        .postShorten-excerpt > p {
+        .postShorten-excerpt>p {
             margin-bottom: 0;
         }
         .postShorten-thumbnailimg {
-
-            display:  block;
-            width:    100%;
+            display: block;
+            width: 100%;
             overflow: hidden;
-            margin:   15px 0 15px 0;
-
+            margin: 15px 0 15px 0;
             img {
-                width:  auto;
+                width: auto;
                 height: auto;
             }
         }
